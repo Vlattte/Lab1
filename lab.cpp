@@ -22,27 +22,30 @@ int main()
 		<< " Automatic: " << &local << std::endl;
 	delete din;
 	//---------------------------------------------------------------------------------------------------------------------------------------------------------//
-	int Arr[3];
+	const int sizeArr = 3;
+	int Arr[sizeArr];
 	std::cout << "Single static array: \n";
 
-	for (int i = 0; i < 3; ++i)
+	for (int i = 0; i < sizeArr; ++i)
 	{
 		Arr[i] = i;
 		std::cout << i << ") " << &Arr[i] << std::endl;
 	}
 
-
-	int* ArrDin = new int[3];
+	const int sizeArrDin = 3;
+	int* ArrDin = new int[sizeArrDin];
 	ArrDin[0] = 0;
 	ArrDin[1] = 1;
 	ArrDin[2] = 2;
 
 	std::cout << "Single dinamic array: \n";
 
-	for (int i = 0; i < 3; ++i)
+	for (int i = 0; i < sizeArrDin; ++i)
 		std::cout << i << ") " << &ArrDin[i] << std::endl;
 
-	int Arr1[2][2];
+	const int sizeArr1_1 = 2;
+	const int sizeArr1_2 = 2;
+	int Arr1[sizeArr1_1][sizeArr1_2];
 	std::cout << "Double static array: \n";
 
 	for (int i = 0; i < 2; ++i)
@@ -52,11 +55,13 @@ int main()
 			std::cout << "Arr1[" << i << "][" << j << "] = " << &Arr1[i][j] << std::endl;;
 		}
 
-	int** ArrDin1 = new int* [2];
+	const int sizeArrDin1_1 = 2;
+	const int sizeArrDin1_2 = 2;
+	int** ArrDin1 = new int* [sizeArrDin1_1];
 
 	for (int count = 0; count < 2; count++)
 	{
-		ArrDin1[count] = new int[2];
+		ArrDin1[count] = new int[sizeArrDin1_2];
 	}
 
 	std::cout << "Double dinamic: \n";
