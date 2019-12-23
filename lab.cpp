@@ -48,8 +48,8 @@ int main()
 	int Arr1[sizeArr1_1][sizeArr1_2];
 	std::cout << "Double static array: \n";
 
-	for (int i = 0; i < 2; ++i)
-		for (int j = 0; j < 2; ++j)
+	for (int i = 0; i < sizeArr1_1; ++i)
+		for (int j = 0; j < sizeArr1_2; ++j)
 		{
 			Arr1[i][j] = i + j;
 			std::cout << "Arr1[" << i << "][" << j << "] = " << &Arr1[i][j] << std::endl;;
@@ -59,15 +59,15 @@ int main()
 	const int sizeArrDin1_2 = 2;
 	int** ArrDin1 = new int* [sizeArrDin1_1];
 
-	for (int count = 0; count < 2; count++)
+	for (int count = 0; count < sizeArrDin1_1; count++)
 	{
 		ArrDin1[count] = new int[sizeArrDin1_2];
 	}
 
 	std::cout << "Double dinamic: \n";
 
-	for (int i = 0; i < 2; ++i)
-		for (int j = 0; j < 2; ++j)
+	for (int i = 0; i < sizeArrDin1_1; ++i)
+		for (int j = 0; j < sizeArrDin1_2; ++j)
 		{
 			ArrDin1[i][j] = i + j;
 			std::cout << "ArrDin1[" << i << "][" << j << "] = " << &ArrDin1[i][j] << std::endl;
